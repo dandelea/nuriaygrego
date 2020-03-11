@@ -1,0 +1,39 @@
+<script src="views/public/MainController.js"></script>
+<!-- Header -->
+<div id="header">
+	<div class="container">
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				<li class=""><a href="/">Inicio</a></li>
+				<li class=""><a href="/gallery">Galería</a></li>
+				<li class=""><a href="/video">Vídeo</a></li>
+				<li class=""><a href="/contact">Contacto</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div id="logo-wrapper">
+		<div class="container" >
+			<!-- Logo -->
+			<div id="logo">
+				<div class="container_pliegue">
+					<img src="img/lol.png" class="screen-only" />
+					<h1 class="screen-only"><a href="/">Nuria &nbsp; &nbsp; <span class="center_heart"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" data-original-aspect-ratio="1.1127868654675608" style="width: 36px; height: 32px;">
+							<g transform="translate(0,0.003005000064149499)">
+								<path id="heart" d="M32.17252 2.1925C30.125606 0.474891,28.131228 -0.003005,25.482903 0c-2.811217 0.2433,-5.244736 1.615335,-7.983004 5.082571C14.761735 1.615335,12.328215 0.2433,9.516998 0C6.868673 -0.003005,4.874088 0.474891,2.827174 2.1925C1.503633 3.303205,0 6.252547,0 9.063141c0.035127 5.654865,3.978083 14.155453,16.94035 22.06126l0.535198 0.325161l0.024454 -0.01461l0.024454 0.01461l0.535198 -0.325161c12.962266 -7.905808,16.905223 -16.406395,16.94035 -22.06126C34.999901 6.252547,33.496061 3.303205,32.17252 2.1925z"></path>
+							</g>
+						</svg></span>&nbsp; &nbsp; &nbsp; Grego
+					</a></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div ng-controller="MainCtrl">
+
+	<div class="box">
+  		<h1 id="author" ng-bind="displayed_dedicatory.name"></h1> 
+  		<p id="dedicatory" ng-bind="displayed_dedicatory.body"></p>
+	</div>
+
+</div>

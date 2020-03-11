@@ -1,0 +1,109 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #f9f9f9;
+}
+
+::-webkit-input-placeholder{color: #777;}
+:-moz-placeholder { /* Firefox 18- */ color: #777;}
+::-moz-placeholder {  /* Firefox 19+ */ color: #777;}
+:-ms-input-placeholder {color: #777;}
+
+.container_contact{
+	width: 90%;
+	padding: 15px;
+	margin: 50px auto;
+}
+
+.title-bar{
+	margin: 1px auto 10px auto;
+	width: 100px;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+#contact input[type="text"],#contact input[type="email"], #contact textarea{
+	display: block;
+	padding: 10px;
+	margin: 10px auto;
+	width: 90%;
+	font-size: 18px;
+	color: #777;
+  border: 1px solid #ccc;
+}
+
+#contact textarea{
+	font-size: 16px;
+}
+
+#contact input:hover, #contact textarea:hover{
+	border: 1px solid #888;
+}
+#contact input:focus, #contact textarea:focus{
+	border: 1px solid #777;
+}
+
+
+#contact textarea{
+	max-width: 90%;
+	min-width: 90%;
+	max-height: 140px;
+	min-height: 140px;
+  resize: none;
+}
+
+#contact .send-button{
+	text-align: center;
+}
+
+#contact .send-button button[type="submit"]{
+  cursor: pointer;
+  background: #e74c3c;
+	color: #fff;
+  border: none;
+	width: 100%;
+	padding: 10px 0;
+	font-size: 20px;
+	text-transform: uppercase;
+	transition: .5s ease;
+	border-radius: 6px;
+}
+
+#contact .send-button button[type="submit"]:hover{
+	background: #c0392b;
+}
+
+#contact .send-button button[type="submit"]:focus{
+	position: relative;
+	top: 2px;
+}
+
+/*##############\*
+    Responsive
+\*##############*/
+
+@media screen and (min-width: 640px){
+	.container_contact{
+		width: 600px;
+	}
+
+	#contact .right,#contact .left{
+		display: block;
+	}
+
+	#contact .right{
+		float: right;
+		width: 50%;
+	}
+	#contact .left{
+		float: left;
+		width: 50%;
+	}
+	.cl{
+    clear: both;
+  }
+}

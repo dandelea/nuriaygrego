@@ -1,0 +1,18 @@
+{
+  "name": "nuriaygrego",
+  "version": "1.0.0",
+  "description": "Small NodeJS + AngujarJS webpage I did long time ago...",
+  "main": "index.js",
+  "author": "Daniel de los Reyes Leal",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "errorhandler": "^1.5.1",
+    "express": "4.17.1",
+    "method-override": "^3.0.0",
+    "morgan": "^1.9.1"
+  },
+  "scripts": {
+    "start": "node ./index.js"
+  }
+}

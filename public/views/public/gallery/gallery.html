@@ -1,0 +1,160 @@
+<link rel="stylesheet" href="css/gallery.css" />
+
+<!-- Banner -->
+<div id="banner">
+	<div class="container">
+	</div>
+</div>
+<!-- /Banner -->
+
+<!-- Main -->
+<script src="views/public/gallery/GalleryController.js"></script>
+
+<div id="main">
+	<div class="container" ng-controller="GalleryCtrl">
+		<div class="row">
+			<div class="9u">
+				<section>
+					<header>
+						<h2 style="font-family: 'Niconne',cursive;">Galería</h2>
+					</header>
+					<!-- Tabs -->
+					<div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
+				    	<a id="pestana" href="/gallery/photocall/0" class="btn btn-default" role="button" ng-class="{'active':section=='photocall'}">Photocall</a>
+				    	<a id="pestana" href="/gallery/reportaje/0" class="btn btn-default" role="button" ng-class="{'active':section=='reportaje'}">Reportaje</a>
+				    	<a id="pestana" href="/gallery/invitados/0" class="btn btn-default" role="button" ng-class="{'active':section=='invitados'}">Invitados</a>
+				    </div>
+					<!-- Panels -->
+					<div class="panel-body">
+						<div class="tab-content">
+							<div id="gallery">
+
+								<section ng-hide="section!='photocall'">
+									<a class="fancybox" rel="gallery_photocall" href="{{image.link}}" ng-repeat="image in images_photocall | startFrom:currentPage*pageSize | limitTo:pageSize">
+										<img src="{{image.thumbnail}}" class="img-responsive" />
+									</a>
+
+									<script>
+										$(document).ready(function() {
+											$("a[rel=gallery_photocall]").fancybox({
+												'autoScale': true,
+												'transitionIn': 'elastic',
+												'transitionOut': 'elastic',
+												'speedIn': 500,
+												'speedOut': 300,
+												'autoDimensions': true,
+												'centerOnScroll': true
+											});
+										});
+									</script>
+								</section>
+								<div ng-hide="section!='photocall'" class="col-md-12">
+									<nav>
+										<ul class="pager">
+											<li class="previous" ng-class="{'disabled': currentPage==0}">
+												<a href="" ng-click="previousPage()" >
+													<span aria-hidden="true">&larr;</span> Anterior
+												</a>
+											</li>
+											<li><span>{{currentPage+1}} / {{Math.ceil(images_photocall.length/pageSize)}}</span></li>
+											<li class="next" ng-class="{'disabled': currentPage >= images_photocall.length/pageSize - 1}">
+												<a href="" ng-click="nextPage()">
+													Siguiente <span aria-hidden="true">&rarr;</span>
+												</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+
+								<section ng-hide="section!='reportaje'">
+									<a class="fancybox" rel="gallery_reportaje" href="{{image.link}}" ng-repeat="image in images_reportaje | startFrom:currentPage*pageSize | limitTo:pageSize">
+										<img src="{{image.thumbnail}}" class="img-responsive" />
+									</a>
+
+									<script>
+									$(document).ready(function() {
+										$("a[rel='gallery_reportaje']").fancybox({
+											hideOnContentClick: true, 
+											showCloseButton: false, 
+											overlayShow: true, 
+											overlayOpacity: 0.15, 
+											scrolling: 'no', 
+											centerOnScroll: true, 
+											titleShow: false,
+											padding: 0,
+											autoDimensions: false, 
+											margin: 0,
+											autoScale: true
+										});
+									});
+									</script>
+								</section>
+								<div ng-hide="section!='reportaje'" class="col-md-12">
+									<nav>
+										<ul class="pager">
+											<li class="previous" ng-class="{'disabled': currentPage==0}">
+												<a href="" ng-click="previousPage()" >
+													<span aria-hidden="true">&larr;</span> Anterior
+												</a>
+											</li>
+											<li><span>{{currentPage+1}} / {{Math.ceil(images_reportaje.length/pageSize)}}</span></li>
+											<li class="next" ng-class="{'disabled': currentPage >= images_reportaje.length/pageSize - 1}">
+												<a href="" ng-click="nextPage()">
+													Siguiente <span aria-hidden="true">&rarr;</span>
+												</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+
+
+
+								<section ng-hide="section!='invitados'">
+									<a class="fancybox" rel="gallery_invitados" href="{{image.link}}" ng-repeat="image in images_invitados | startFrom:currentPage*pageSize | limitTo:pageSize">
+										<img src="{{image.thumbnail}}" class="img-responsive" />
+									</a>
+
+									<script>
+									$(document).ready(function() {
+										$("a[rel=gallery_invitados]").fancybox({
+											'autoScale': true,
+											'transitionIn': 'elastic',
+											'transitionOut': 'elastic',
+											'speedIn': 500,
+											'speedOut': 300,
+											'autoDimensions': true,
+											'centerOnScroll': true
+										});
+									});
+									</script>
+								</section>
+								<div ng-hide="section!='invitados'" class="col-md-12">
+									<nav>
+										<ul class="pager">
+											<li class="previous" ng-class="{'disabled': currentPage==0}">
+												<a href="" ng-click="previousPage()" >
+													<span aria-hidden="true">&larr;</span> Anterior
+												</a>
+											</li>
+											<li><span>{{currentPage+1}} / {{Math.ceil(images_invitados.length/pageSize)}}</span></li>
+											<li class="next" ng-class="{'disabled': currentPage >= images_invitados.length/pageSize - 1}">
+												<a href="" ng-click="nextPage()">
+													Siguiente <span aria-hidden="true">&rarr;</span>
+												</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+
+							</div>
+
+								
+
+							</div>		
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>

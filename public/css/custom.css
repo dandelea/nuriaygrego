@@ -1,0 +1,89 @@
+#heart {
+	fill: rgba(247, 178, 170, 1);
+  	stroke: rgba(61, 44, 42, 1);
+  	stroke-width: 0px;
+}
+
+.container_pliegue{
+    height: 200px;
+    position: relative;
+    position: relative;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+.container_pliegue img {
+    height: 200px;
+    position: relative;
+    position: relative;
+  	display: block;
+  	width:100%;
+}
+
+
+h2 {
+    font-family: "Niconne",cursive;
+}
+
+header h2 {
+  font-size: 5em;
+}
+
+#pestana {
+  background-color: #CCC;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  border: 2px solid #AAA;
+  margin: 0 10px;
+  font-weight: bold;
+  color: #A67C52;
+}
+
+#pestana:hover {
+  background-color: #EEE;
+}
+
+#pestana.active{
+  color: #000;
+  background-color: #FFF;
+}
+
+#formDedicatory{
+  margin-left: 27%;
+  margin-right: 27%;
+}
+
+@media only screen and (max-device-width: 1000px) {
+
+  span.title {
+    display: none;
+  }
+
+  #banner {
+    display:none;
+  }
+
+  header h2 {
+    font-size: 3em;
+  }
+
+  #formDedicatory{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .box {
+    margin-top: 30%;
+  }
+
+  #main {
+    margin-top: 30%;
+  }
+}
+
+@media (min-width: 1200px) {
+    #header .container {
+        width: 90vw;
+    }
+}

@@ -1,0 +1,20 @@
+sudo: required
+services:
+  - docker
+
+script:
+  - docker build -t dandelea/nuriaygrego .
+
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  region: "eu-west-3"
+  app: "nuriaygrego"
+  env: "Nuriaygrego-env"
+  bucket_name: "elasticbeanstalk-eu-west-3-710277460016"
+  bucket_path: "nuriaygrego"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+    
